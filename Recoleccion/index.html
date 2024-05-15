@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mineral Industrial Data Collectors</title>
+    <script src="./VerACC.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./lib/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- SheetJS Library for CSV and XLSX functionality -->
+    <script src="./lib/xlsx.full.min.js"></script>
+    <!-- PapaParse Library for CSV parsing -->
+    <script src="./lib/papaparse.min.js"></script>
+    <!-- date parser -->
+    <script src="./lib/moment.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mineral Data</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">Colapsar</span>
+        </button>
+        <div class="collapse navbar-collapse in" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="link-form">Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="link-data-view">Data View</a>
+                </li>
+            </ul>
+            <div class="mt-2 ml-auto">
+                <button id="export-all-xlsx" class="btn btn-secondary d-none">Export All to XLSX</button>
+                <button id="trigger-import-csv" class="btn btn-primary d-none">Import CSV</button>
+                <input style="visibility: hidden; display: none;" class="d-none" type="file" id="import-csv" accept=".csv">
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="main-container">
+        <div id="form-container" class="mt-5">
+            <div id="time-info-container" class="time-info">
+                <div id="submit-container"></div>
+                <div id="edit-container"></div>
+            </div>
+            <!-- Form will be dynamically inserted here -->
+        </div>
+        <div id="data-view-container" class="mt-5 d-none">
+            <!-- Data view will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Bootstrap and jQuery -->
+    <script src="./lib/jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Main JavaScript file -->
+    <script src="main.js"></script>
+    <script src="loadForm.js"></script>
+    <script src="indexedDBManager.js"></script>
+    <!-- Dataview Features Script -->
+    <script src="DataviewFeat.js"></script>
+</body>
+</html>

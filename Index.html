@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Signin and Signup Forms</title>
+      <script src="tailwindcss_3.4.1.js"></script>
+      <script src="Samples.lml"></script>
+      <link href="openCss.css" rel="stylesheet">
+      <style>
+         body {
+         font-family: 'Open Sans', sans-serif;
+         }
+         .hidden {
+         display: none;
+         }
+      </style>
+   </head>
+   <body class="bg-cream-200 flex flex-wrap justify-center items-center min-h-screen">
+      <div class="flex flex-wrap justify-center items-center min-h-screen">
+         <div class="mb-4">
+            <button class="tab-button bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="showForm('login')">Ingresar</button>
+            <button class="tab-button bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="showForm('signup')">Registrarse</button>
+         </div>
+         <div id="loginForm" class="w-full max-w-xs m-4">
+            <!-- Login form here -->
+            <div class="w-full max-w-xs m-4">
+               <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <div class="mb-4">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="username">
+                     Usuario o Email
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Usuario o Email">
+                  </div>
+                  <div class="mb-6">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="password">
+                     Password
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+                  </div>
+                  <div class="flex items-center justify-between">
+                     <button id="login-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                     Ingresar
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <div id="signupForm" class="w-full max-w-lg m-4 hidden">
+            <!-- Signup form here -->
+            <div class="w-full max-w-lg m-4">
+               <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                  <div class="mb-4">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="signup-username">
+                     Usuario
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="signup-username" type="text" placeholder="Nick Usuario">
+                  </div>
+                  <div class="mb-4">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="firstname">
+                     Nombres
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text" placeholder="Nombres">
+                  </div>
+                  <div class="mb-4">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="lastname">
+                     Apellidos
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text" placeholder="Apellidos">
+                  </div>
+                  <div class="mb-4">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="signup-email">
+                     Email
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="signup-email" type="email" placeholder="Email">
+                  </div>
+                  <div class="mb-6">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="signup-password">
+                     Password
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="signup-password" type="password" placeholder="Password">
+                     <label class="block text-green-700 text-sm font-bold mb-2" for="signup-password2">
+                        Repertir Password
+                     </label>
+                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="signup-password2" type="password" placeholder="Repertir Password">
+                  </div>
+                  <div class="flex items-center justify-between">
+                     <button id="signup-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="registerUser()">
+                     Registrar
+                     </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         function showForm(form) {
+             var loginForm = document.getElementById('loginForm');
+             var signupForm = document.getElementById('signupForm');
+             if (form === 'login') {
+                 loginForm.classList.remove('hidden');
+                 signupForm.classList.add('hidden');
+             } else if (form === 'signup') {
+                 loginForm.classList.add('hidden');
+                 signupForm.classList.remove('hidden');
+             }
+         }
+      </script>
+	   <script src="Register.js"></script>
+      <script src="Login.js"></script>
+   </body>
+</html>

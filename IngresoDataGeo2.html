@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Experience Survey</title>
+    <link rel="stylesheet" href="survey.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <div class="form-container">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Integration Experience Survey</h2>
+      <button class="close-button">✖️</button>
+    </div>
+    
+    <!-- Survey form -->
+    <form id="survey-form">
+      <!-- Likelihood to recommend -->
+      <fieldset class="mb-6">
+        <legend class="mb-2 text-lg font-medium">Would you recommend a Braintree integration to another developer?</legend>
+        <div class="flex space-x-2">
+          <!-- Inline styles are placeholders, replace with your classes -->
+          <label for="rate1">1<input type="radio" name="recommend" id="rate1" class="sr-only" /></label>
+          <label for="rate2">2<input type="radio" name="recommend" id="rate2" class="sr-only" /></label>
+          <!-- Repeat for numbers 3 through 10 -->
+        </div>
+      </fieldset>
+
+      <!-- Importance of integration documentation -->
+      <fieldset class="mb-6">
+        <legend class="mb-2 text-lg font-medium">Pick the 3 things you find most important with integrations documentation</legend>
+        <div class="flex flex-wrap gap-4">
+          <label><input type="checkbox" name="documentation" value="tutorials" /> Tutorials</label>
+          <label><input type="checkbox" name="documentation" value="api_reference" /> API Reference</label>
+          <!-- Repeat for other options -->
+        </div>
+      </fieldset>
+
+      <!-- Integration experience score -->
+      <fieldset class="mb-6">
+        <legend class="mb-2 text-lg font-medium">How would you score your integration experience so far?</legend>
+        <div class="flex space-x-2">
+          <label for="exp1">😞<input type="radio" name="experience" id="exp1" class="sr-only" /></label>
+          <label for="exp2">😐<input type="radio" name="experience" id="exp2" class="sr-only" /></label>
+          <!-- Repeat for other emojis -->
+        </div>
+      </fieldset>
+
+      <!-- Current occupation dropdown -->
+      <div class="mb-6">
+        <label for="occupation" class="block mb-2 text-lg font-medium">What are you busy with right now?</label>
+        <select id="occupation" name="occupation" class="w-full">
+          <option value="researching">Researching</option>
+          <!-- Add other options -->
+        </select>
+      </div>
+
+      <!-- Company size -->
+      <fieldset class="mb-6">
+        <legend class="mb-2 text-lg font-medium">How big is your company?</legend>
+        <div class="flex space-x-2">
+          <button type="button">Startup</button>
+          <!-- Repeat for other company sizes -->
+        </div>
+      </fieldset>
+
+      <!-- Opt-in for future surveys -->
+      <div class="mb-6">
+        <label for="email" class="block mb-2 text-lg font-medium">Can we reach out to you for future surveys?</label>
+        <input type="email" id="email" name="email" placeholder="Email address (optional)" class="w-full" />
+      </div>
+
+      <!-- Form submission buttons -->
+      <div class="flex justify-between items-center">
+        <button type="button" class="hide-button">Hide for now</button>
+        <button type="submit" class="submit-button">Submit answers</button>
+      </div>
+    </form>
+  </div>
+  <script src="survey.js"></script> <!-- Link to your JS file -->
+</body>
+</html>
